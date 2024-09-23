@@ -5,6 +5,7 @@ urlpatterns = [
     
     path('', inicio,name="Inicio"),
     path('Store', Tienda,name="Store"),
-    path('Login', Formulariocuenta,name="Login"),
+    path('Login', Inicio_sesion,name="Login"),
+    path('Register', Registro,name="Register"),
 
 ]

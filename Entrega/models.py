@@ -10,3 +10,4 @@ class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     stock = models.CharField(max_length=50)
     Precio = models.CharField(max_length=50)
+

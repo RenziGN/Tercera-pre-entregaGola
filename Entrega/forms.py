@@ -6,8 +6,12 @@ class UserFormulario(forms.Form):
     Password = forms.CharField(required=True)
     Mail = forms.CharField(required=True)
 
-class Producto(forms.Form):
+class ProductoFormulario(forms.Form):
 
     nombre = forms.CharField(required=True)
-    stock = forms.CharField(required=True)
-    Precio = forms.CharField(required=True)
+    stock = forms.IntegerField(required=True)
+    Precio = forms.FloatField(required=True)
+
+class VentasproductoFormulario(forms.Form):
+    nombreproducto = forms.CharField(required=True)
+    Cantidaddeventas = forms.IntegerField(required=True)

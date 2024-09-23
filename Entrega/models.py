@@ -8,6 +8,15 @@ class Usuarios(models.Model):
 
 class Producto(models.Model):
     nombre = models.CharField(max_length=100)
-    stock = models.CharField(max_length=50)
-    Precio = models.CharField(max_length=50)
+    stock = models.IntegerField()
+    Precio = models.FloatField(default=0)
+
+class Ventasproducto(models.Model):
+    nombreproducto = models.CharField(max_length=50)
+    Cantidaddeventas = models.IntegerField()
+
+
+
+   
+
 

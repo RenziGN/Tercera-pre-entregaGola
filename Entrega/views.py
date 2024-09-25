@@ -18,3 +18,13 @@ def inicio(req):
     documento = plantilla.render()
     return HttpResponse(documento)
 
+
+
+def buscarusuario(req):
+    return render(req, "buscar_usuario.html")
+
+def buscar(req):
+    usuarioo =req.GET["User"]
+    usuario = Usuarios.objects.get(User=usuarioo)
+
+    return render(req,"resultado_busqueda.html",{"User" : usuario })

@@ -1,0 +1,30 @@
+{% extends "NavBar.html" %}
+
+{% load static %}
+{% block contenidoquecambia %}
+
+
+<head>
+    {% load static %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <title>Inicio de Sesion</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Bootstrap icons-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="{% static '/css/tienda.css' %}"  rel="stylesheet" />
+</head>
+
+    <p> Estamos buscando usuarios con el nombre {{User}} <p>
+
+    <h3>El nombre de usuario es: {{User.User}}</h3>
+    <h3>El correo asignado a este usuario es: {{User.Mail}}</h3>
+
+ 
+
+   
+{% endblock %}

@@ -84,4 +84,3 @@ def Ventas(req):
         return render(req,"ventas.html",{"form_sales" : form_sales})
 
 
-

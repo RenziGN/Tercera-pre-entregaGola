@@ -6,6 +6,9 @@ class Usuarios(models.Model):
     Mail = models.EmailField(max_length=150)
     Password = models.CharField(max_length=50)
 
+    def __str__(self):
+        return f'{self.User} {self.Mail}'
+
 class Producto(models.Model):
     nombre = models.CharField(max_length=100)
     stock = models.IntegerField()

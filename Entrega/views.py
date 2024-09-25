@@ -25,6 +25,6 @@ def buscarusuario(req):
 
 def buscar(req):
     usuarioo =req.GET["User"]
-    usuario = Usuarios.objects.get(User=usuarioo)
+    usuario = Usuarios.objects.filter(User__icontains=usuarioo)
 
-    return render(req,"resultado_busqueda.html",{"User" : usuario })
+    return render(req,"resultado_busqueda.html",{"Users" : usuario })

@@ -19,11 +19,17 @@
     <link href="{% static '/css/tienda.css' %}"  rel="stylesheet" />
 </head>
 
-    <p> Estamos buscando usuarios con el nombre {{User}} <p>
+    {% if Users %}
+        <ul>
+            {% for user in Users %}
+            <li>El nombre de usuario es: {{user.User}} 
+                el correo asignado es: {{user.Mail}}</li>
+            {% endfor %}
+        </ul>
 
-    <h3>El nombre de usuario es: {{User.User}}</h3>
-    <h3>El correo asignado a este usuario es: {{User.Mail}}</h3>
-
+    {% else %}
+        <p>No se encontraron usuarios con ese nombre </p>
+    {% endif %}
  
 
    
